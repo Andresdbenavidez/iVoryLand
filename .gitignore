@@ -1,0 +1,19 @@
+# Bases de datos temporales y logs de prueba
+*.db
+*.sqlite
+*.sql
+*.log
+
+# Compilados del sistema y archivos del SO
+*.luac
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Excluir recursos nativos por defecto de MTA para no saturar el repo
+[admin]/
+[builders]/
+[editor]/
+[gameplay]/
+[managers]/
+[web]/

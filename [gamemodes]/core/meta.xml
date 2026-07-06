@@ -1,0 +1,23 @@
+<meta>
+    <info author="ByKodek" type="gamemode" name="IvoryLand" version="1.0.0" />
+    <oop>true</oop>
+    
+    <!-- 1. Primero las configuraciones compartidas -->
+    <script src="shared/config.lua" type="shared" />
+
+    <!-- 2. SERVIDOR: Primero la DB, luego dependencias y al final el gestor general -->
+    <script src="server/database.lua" type="server" />
+    <script src="server/auth.lua" type="server" />
+    <script src="server/spawn.lua" type="server" />
+    <script src="server/main.lua" type="server" />
+
+    <!-- 3. CLIENTE: Primero cámaras e interfaz, luego el inicializador -->
+    <script src="client/camera.lua" type="client" />
+    <script src="client/gui_login.lua" type="client" />
+    <script src="client/main.lua" type="client" />
+
+    <!-- Exportamos la función de guardado para que otros recursos puedan llamarla -->
+    <export function="guardarDatosJugador" type="server" />
+</meta>
+
+

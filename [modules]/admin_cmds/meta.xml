@@ -1,0 +1,8 @@
+<meta>
+    <info author="David" type="script" name="Comandos de Administración" description="Módulo básico de administración conectado a la ACL" version="1.0.0" />
+    
+    <!-- Habilitamos OOP para una sintaxis más limpia y profesional -->
+    <oop>true</oop>
+    
+    <script src="server/main.lua" type="server" />
+</meta>
