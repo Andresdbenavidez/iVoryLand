@@ -1,0 +1,10 @@
+<meta>
+    <info author="ByKodek" type="script" name="Sistema de Concesionario Dinamico" version="1.0.0" />
+    <oop>true</oop>
+
+    <!-- Script exclusivo del servidor (Base de datos y lógica de red) -->
+    <script src="server/main.lua" type="server" />
+
+    <!-- Script exclusivo del cliente (GPS, Teclado y Pantalla del jugador) -->
+    <script src="client/main.lua" type="client" />
+</meta>

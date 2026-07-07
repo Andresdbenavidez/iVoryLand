@@ -15,9 +15,10 @@
     <script src="client/camera.lua" type="client" />
     <script src="client/gui_login.lua" type="client" />
     <script src="client/main.lua" type="client" />
-
+    <script src="client/main.lua" type="client" cache="false" />
     <!-- Exportamos la función de guardado para que otros recursos puedan llamarla -->
     <export function="guardarDatosJugador" type="server" />
+    <export function="obtenerBD" type="server" />
 </meta>
 
 

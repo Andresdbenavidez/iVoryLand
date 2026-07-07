@@ -14,6 +14,13 @@ function mostrarPanelAuth()
     -- Activamos la cámara panorámica
     activarCamaraLogin()
 
+    -- 🛑 SOLUCCIÓN AL RATÓN: Forzamos a que aparezca el cursor del mouse en pantalla
+    showCursor(true)
+
+    -- 🛑 SOLUCCIÓN TÉCNICA DEFINITIVA A LAS LETRAS DEL CHAT (T, I, F, etc.):
+    -- Esto bloquea por completo que los comandos/binds del juego se gatillen mientras escribes
+    guiSetInputMode("no_binds_when_editing")
+
     -- Obtener la resolución de la pantalla del jugador para centrar la ventana perfecto
     local pantallaX, pantallaY = guiGetScreenSize()
     local ancho, alto = 320, 260
@@ -96,6 +103,12 @@ function cerrarPanelAuth()
         destroyElement(VentanaLogin)
         VentanaLogin = nil
     end
+    
+    -- 🔓 DEVOLVEMOS EL CONTROL AL JUEGO:
+    -- Ocultamos el cursor del mouse y reactivamos las teclas nativas (como la T para chatear)
+    showCursor(false)
+    guiSetInputMode("allow_binds")
+    
     desactivarCamaraLogin()
 end
 
